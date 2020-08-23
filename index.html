@@ -11,25 +11,24 @@
 
 <body>
 
-  <div class="wrapper">
-    <h1 v-bind:title="message">ToDo in VueJs</h1>
-    <div class="list__item">
-        <input class="inp" type="text" placeholder="введите заголовок">
-        <input class="inp" type="text" placeholder="введите описание задачи">
-        <button class="add">add</button>
-    </div>
+  <div id="app">
+    <div class="wrapper">
+      <h1>ToDo in VueJs</h1>
+      <div class="list__item">
+        <input v-model="new_task.title" class="inp" type="text" placeholder="введите заголовок">
+        <input v-model="new_task.desc" class="inp" type="text" placeholder="введите описание задачи">
+        <button @click="add()" class="add">add</button>
+      </div>
 
-    <ul class="list">
-      <div id="app">
+      <ul class="list">
         <item-list
           v-for="(item, index) in todo"
           :key="index"
           :props="item"
           @task_done="remove(index)"
         ></item-list>
-      </div>
-
-    </ul>
+      </ul>
+    </div>
   </div>
 
   <!-- <div class="main">

@@ -8,7 +8,7 @@ Vue.component('itemList', {
   },
   template: `
     <li class="list__item">
-      <div class="list__item-title">{{ props.id }}. {{ props.title }}</div>
+      <div class="list__item-title">{{ props.title }}</div>
       <div class="list__item-row">
         <div class="list__item-description">{{ props.desc }}</div>
         <div class="list__item-action">
@@ -23,17 +23,29 @@ Vue.component('itemList', {
 new Vue({
   el: '#app',
   data: {
+    new_task: {
+      title: '',
+      desc: '',
+    },
     todo: [
-      { id: 1, title: 'my-task', desc: 'lorem' },
-      { id: 2, title: 'my-task_2', desc: 'lorem ipsum' },
-      { id: 3, title: 'my-task_3', desc: 'lorem dolor ipsum dolor' },
+      { title: 'my-task', desc: 'lorem' },
+      { title: 'my-task_2', desc: 'lorem ipsum' },
+      { title: 'my-task_3', desc: 'lorem dolor ipsum dolor' },
     ],
   },
   methods: {
     remove(index) {
       console.log(index);
-      console.log(this.todo[index]);
       this.todo.splice(index, 1);
+    },
+    add() {
+      if (this.new_task.title != '') {
+        console.log(333);
+        this.todo.push({
+          title: this.new_task.title,
+          desc: this.new_task.desc,
+        });
+      }
     },
   },
 });
