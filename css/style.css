@@ -28,6 +28,12 @@ img {
   height: 100%;
 }
 
+button {
+  padding: 10px;
+  color: red;
+  border-radius: 10px;
+}
+
 /*безопасное скрытие элемента*/
 .visually-hidden {
   position: absolute;
@@ -38,5 +44,110 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  margin: 50px auto;
+  border: 4px groove gray;
+  color: black;
+  max-width: 400px;
+
+}
+
+h1 {
+  text-align: center;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.list__item {
+  background-color: #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.list__item-title {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-weight: bold;
+  background-color: salmon;
+}
+
+.list__item-row {
+  display: flex;
+  padding: 10px;
+}
+
+.list__item--row-inp {
+  display: block;
+}
+
+.inp {
+  margin-bottom: 10px;
+  width: 200px;
+  display: block;
+}
+
+.inp,
+.list__item-description {
+  flex-grow: 1;
+}
+
+.list__item-action {
+  display: flex;
+  padding: 0 10px;
+  border-left: 1px solid black;
+}
+
+.delete {
+  margin: auto;
+}
+
+.add {
+}
+
+/* --------------------------------------- */
+
+.main {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.main-element {
+  width: inherit;
+  height: inherit;
+}
+
+.main-element-one {
+  margin-top: calc(-50%);
+  background-color: red;
+  /* animation-name: xxx; */
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+.main-element-two {
+  background-color: blue;
+}
+
+@keyframes xxx {
+  0% {
+    margin-top: calc(-50%);
+  }
+  50% {
+    margin-top: calc(-100%);
+  background-color: red;
+
+  }
+  100% {
+    margin-top: calc(0%);
+  background-color: black;
+  }
 }
 
