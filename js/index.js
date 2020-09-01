@@ -19,7 +19,6 @@ Vue.component('itemList', {
   `,
 });
 
-// eslint-disable-next-line no-undef
 new Vue({
   el: '#app',
   data: {
@@ -39,12 +38,14 @@ new Vue({
       this.todo.splice(index, 1);
     },
     add() {
-      if (this.new_task.title != '') {
+      if (this.new_task.title !== '') {
         console.log(333);
         this.todo.push({
           title: this.new_task.title,
           desc: this.new_task.desc,
         });
+        this.new_task.title = '';
+        this.new_task.desc = '';
       }
     },
   },
