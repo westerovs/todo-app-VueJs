@@ -27,9 +27,9 @@ new Vue({
       desc: '',
     },
     todo: [
-      { title: 'my-task', desc: 'lorem' },
-      { title: 'my-task_2', desc: 'lorem ipsum' },
-      { title: 'my-task_3', desc: 'lorem dolor ipsum dolor' },
+      { title: 'Learn Vue', desc: 'Middle' },
+      { title: 'Learn Vuex', desc: 'Hard' },
+      { title: 'Learn Learn Learn...', desc: 'lorem dolor ipsum dolor' },
     ],
   },
   methods: {
