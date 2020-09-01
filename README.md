@@ -1,4 +1,4 @@
 # todo-app-VueJs
-<b>испытать:<b>
+<p>испытать:<p>
 https://westerovs.github.io/todo-app-VueJs/
-<!-- <img src="cover.jpg"/> -->
+<img src="cover.jpg"/>
